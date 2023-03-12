@@ -13,11 +13,10 @@ body {
 
 html {
   font-style: normal;
-  font-weight: 400;
-  font-size: $fz-default;
-  line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-family: $text-font-family;
+  font-size: 16px;
+  line-height: 21px;
+  color: $dark-blue;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,12 +29,14 @@ html {
 body {
   width: 100%;
   height: 100%;
-
-  background-color: $color-default-white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-blue-background;
 }
 
 a {
-  color: $color-default-black;
+  color: $light-blue-text;
   text-decoration: none;
 }
 
@@ -57,9 +58,10 @@ textarea {
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
+  box-shadow: inset 0 0 0 1000px $light-blue-text;
 
-  -webkit-text-fill-color: $color-default-black;
+  -webkit-text-fill-color: $dark-blue;
+  ;
 }
 
 // firefox placeholder \ invalid fix + ios bdrs
@@ -82,6 +84,7 @@ select {
 
 // ie11 X removal
 input {
+
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

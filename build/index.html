@@ -9,38 +9,49 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <header class="main-header container">
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__wrapper">
       <a class="main-header__logo logo" href="index.html" aria-label="Главная страница">
         <picture>
-          <source media="(min-width: 320px)" srcset="img/background-image/icons/logo-mobile.svg" width="35" height="35">
+          <source media="(max-width: 767px)" srcset="img/background-image/icons/logo-mobile.svg" width="35" height="35">
           <img class="logo__img" src="img/background-image/icons/logo-desktop.svg" width="215" height="55" alt="Логотип магазина печатных плат Smart Device">
       </picture>
         </a>
         <ul class="main-header__list contacts-list">
           <li class="contacts-list__item">
-            <a class="contacts-list__link" href="tel:+74950005252">
-              <svg class="contacts-list__icon" aria-hidden="true" focusable="false" width="19" height="20">
-                <use xlink:href="img/sprite.svg#phone"></use>
-              </svg>
-              <span class="contacts-list__phone-number">+7 (495) 000 52 52</span>
-            </a>
-          </li>
-          <li class="contacts-list__item">
             <a class="contacts-list__link" href="mailto:info@sd.ru">
               <svg class="contacts-list__icon" aria-hidden="true" focusable="false" width="20" height="20">
                 <use xlink:href="img/sprite.svg#mail"></use>
               </svg>
-              <span class="contacts-list__mail">info@sd.ru</span>
+              <span class="contacts-list__text">info@sd.ru</span>
+            </a>
+          </li>
+          <li class="contacts-list__item">
+            <a class="contacts-list__link" href="tel:+74950005252">
+              <svg class="contacts-list__icon" aria-hidden="true" focusable="false" width="19" height="20">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+              <span class="contacts-list__text">+7 (495) 000 52 52</span>
             </a>
           </li>
         </ul>
-        <button class="main-header__button button">Заказать звонок</button>
+        <button class="main-header__button button button--transparent">Заказать звонок</button>
+      </div>
+      </div>
     </header>
       <main class="main-index">
+        <h1 class="visually-hidden">Интернет-магазин печатных плат Smart Device</h1>
         <section class="main-index__promo promo">
-          <h1 class="promo__title">Печатные платы</h1>
-          <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="promo__link button">Получить бесплатную консультацию</a>
+          <img class="promo__img" src="img/background-image/desktop/promo-image-desktop.png">
+          <div class="container promo__content">
+          <h2 class="promo__title">Печатные платы</h2>
+          <p class="promo__text">производство и монтаж, поставка комплектующих, <br> блоков и модулей</p>
+          <a class="promo__link button">
+            <span class="promo__fulltext">Получить бесплатную консультацию</span>
+            <span class="promo__shorttext">Получить консультацию</span>
+          </a>
+        </div>
         </section>
         <section class="main-index__features features">
           <h2 class="visually-hidden">Преимущества</h2>
@@ -71,7 +82,7 @@
           <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
           </p>
-          <button class="about__button button">Подробнее</button>
+          <button class="about__button buttonbutton--white">Подробнее</button>
         </section>
         <section class="main-index__feedback feedback">
           <h4 class="visually-hidden">Форма обратной связи</h4>
