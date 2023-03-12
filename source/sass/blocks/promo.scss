@@ -1,9 +1,6 @@
 .promo {
   position: relative;
-  background-color: #374758;
-  position: relative;
-  height: 765px;
-  z-index: -5;
+  height: 877px;
 
   @include vp-1023 {
     height: 540px;
@@ -12,6 +9,18 @@
   @include vp-767 {
     height: 490px;
   }
+
+}
+
+.promo::after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #374758;
 }
 
 .promo img {
@@ -20,8 +29,8 @@
   width: 100vw;
   object-fit: cover;
   top: -118px;
-  z-index: -10;
-  height: 881px;
+  z-index: -1;
+  height: 993px;
 
   @include vp-1023 {
     height: 657px;
@@ -33,6 +42,8 @@
 }
 
 .promo__content {
+  // position: relative;
+  // z-index: 100;
   padding-top: 302px;
   padding-left: 169px;
   padding-bottom: 280px;
@@ -100,6 +111,7 @@
 }
 
 .promo__link {
+  cursor: pointer;
   font-size: 18px;
 
   @include vp-1023 {
