@@ -1,0 +1,23 @@
+.site-menu {
+  padding-top: 7px;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
+}
+
+.site-menu h4 {
+  margin: 0;
+  margin-bottom: 23px;
+  font-family: $title-font-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $white;
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    margin-bottom: 19px;
+  }
+}

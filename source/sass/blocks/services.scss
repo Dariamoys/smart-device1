@@ -1,0 +1,163 @@
+.services {
+  padding-top: 70px;
+  padding-bottom: 140px;
+  background-color: $dark-blue;
+
+  @include vp-1023 {
+    padding-top: 56px;
+    padding-bottom: 79px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 86px;
+  }
+}
+
+.services h3 {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: $title-font-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $white;
+
+  @include vp-1023 {
+    margin-bottom: 33px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.services h4 {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: $title-font-family;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    color: $white;
+  }
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 85px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.services__item {
+  width: 100%;
+  position: relative;
+  height: 650px;
+
+  @include vp-1023 {
+    width: 100%;
+    height: 250px;
+  }
+
+
+  @include vp-767 {
+    max-width: 270px;
+    min-width: auto;
+  }
+}
+
+.services__link {
+  cursor: pointer;
+  display: block;
+}
+
+.services__image-wrapper {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  z-index: 0;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+}
+
+.services__item-content {
+  position: relative;
+  z-index: 5;
+  padding-top: 50px;
+  padding-left: 40px;
+
+  @include vp-1023 {
+    padding-top: 40px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+}
+
+.services__item h5 {
+  margin: 0;
+  font-family: $title-font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+
+  @include vp-767 {
+    font-size: 18px;
+  }
+}
+
+
+.services__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: $neon-blue;
+  border-radius: 3px 0 0 0;
+  border: none;
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.services__item img {
+  width: 350px;
+  height: 650px;
+
+
+  @include vp-1023 {
+    width: 100%;
+    min-width: 670px;
+    height: 250px;
+  }
+
+  @include vp-767 {
+    min-width: auto;
+    max-width: 270px;
+  }
+}

@@ -1,0 +1,33 @@
+.page-footer {
+  padding-top: 49px;
+  padding-bottom: 48px;
+  background-color: $dark-blue;
+
+  @include vp-1023 {
+    padding-top: 49px;
+    padding-bottom: 61px;
+  }
+
+  @include vp-767 {
+    padding-top: 35px;
+  }
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 60px 1fr;
+    row-gap: 36px;
+    column-gap: 130px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}

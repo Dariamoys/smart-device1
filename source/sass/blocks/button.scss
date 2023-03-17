@@ -35,11 +35,24 @@
   &--dark {
     background-color: $dark-blue;
     color: #ffffff;
+
+    @include vp-1023 {
+      padding: 14px 69px 10px;
+    }
   }
 
   &--white {
+    padding: 13px 50px;
     background-color: $light-blue-background;
-    color: $color-neon-blue;
+    color: $neon-blue;
+    border: 1px solid $neon-blue;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+
+    @include vp-1023 {
+      padding: 15px 50px;
+    }
   }
 
   &:disabled {

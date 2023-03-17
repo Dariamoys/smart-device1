@@ -1,0 +1,45 @@
+.footer-contacts {
+  padding-top: 8px;
+  padding-left: 26px;
+
+  @include vp-1023 {
+    padding-top: 0;
+    padding-left: 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+.footer-contacts h4 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $title-font-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.footer-contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-contacts__item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.footer-contacts__address {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+}
+
+.footer-contacts__link {
+  font-weight: 400;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}

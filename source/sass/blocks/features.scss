@@ -6,44 +6,7 @@
   }
 
   @include vp-767 {
-    padding-top: 50px;
-  }
-}
-
-.features h3 {
-  margin: 0;
-  margin-bottom: 13px;
-  font-family: $title-font-family;
-  font-size: 24px;
-  line-height: 34px;
-  color: $neon-blue;
-
-  @include vp-1023 {
-    margin-bottom: 8px;
-  }
-
-  @include vp-767 {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-}
-
-.features p {
-  margin: 0;
-  line-height: 22px;
-
-  @include vp-767 {
-    font-size: 14px;
-    line-height: 19px;
-  }
-}
-
-.features br {
-  display: none;
-
-  @include vp-1023 {
-    display: block;
+    padding-top: 48px;
   }
 }
 
@@ -55,6 +18,10 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-1023 {
+    row-gap: 27px;
+  }
 
   @include vp-767 {
     display: flex;
@@ -80,7 +47,7 @@
 
   @include vp-767 {
     min-height: 340px;
-    padding-top: 29px;
+    padding-top: 33px;
     padding-left: 28px;
   }
 
@@ -97,7 +64,54 @@
       left: -4px;
     }
   }
+}
 
+.features__item--short {
+  @include vp-767 {
+    min-height: 325px;
+  }
+}
+
+.features__item h3 {
+  margin: 0;
+  margin-bottom: 13px;
+  font-family: $title-font-family;
+  font-size: 24px;
+  line-height: 34px;
+  color: $neon-blue;
+
+  @include vp-1023 {
+    margin-bottom: 4px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.features__item--short h3 {
+  @include vp-767 {
+    margin-bottom: 17px;
+  }
+}
+
+.features p {
+  margin: 0;
+  line-height: 22px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.features br {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+  }
 }
 
 .features__icon {

@@ -1,0 +1,36 @@
+.footer-navigation {
+  display: flex;
+  gap: 54px;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
+.footer-navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    gap: 11px;
+  }
+}
+
+
+.footer-navigation__link {
+  font-weight: 400;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-navigation__link br {
+  display: block;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
