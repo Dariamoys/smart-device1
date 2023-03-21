@@ -1,3 +1,13 @@
+.logo {
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    outline: 2px solid $neon-blue;
+  }
+}
+
 .logo__img {
   width: 215px;
   height: 55px;

@@ -26,6 +26,7 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    row-gap: 31px;
   }
 }
 
@@ -69,6 +70,7 @@
 .features__item--short {
   @include vp-767 {
     min-height: 325px;
+    padding-top: 28px;
   }
 }
 
@@ -85,6 +87,7 @@
   }
 
   @include vp-767 {
+    margin-bottom: 8px;
     font-size: 20px;
     line-height: 28px;
   }
@@ -92,7 +95,8 @@
 
 .features__item--short h3 {
   @include vp-767 {
-    margin-bottom: 17px;
+    margin-top: 6px;
+    margin-bottom: 13px;
   }
 }
 

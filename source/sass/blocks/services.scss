@@ -9,9 +9,26 @@
   }
 
   @include vp-767 {
-    padding-top: 50px;
+    padding-top: 46px;
     padding-bottom: 86px;
   }
+}
+
+.services__link {
+  color: $white;
+  text-decoration: none;
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.services__link:hover,
+.services__link:focus {
+  outline: 2px solid $neon-blue;
+}
+
+.services__link:active {
+  opacity: 0.6;
 }
 
 .services h3 {
@@ -38,7 +55,7 @@
   @include vp-767 {
     display: block;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     font-family: $title-font-family;
     font-weight: 400;
     font-size: 28px;
@@ -58,6 +75,7 @@
   @include vp-1023 {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
   }
 }
@@ -77,11 +95,6 @@
     max-width: 270px;
     min-width: auto;
   }
-}
-
-.services__link {
-  cursor: pointer;
-  display: block;
 }
 
 .services__image-wrapper {
@@ -107,7 +120,7 @@
   }
 
   @include vp-767 {
-    padding-top: 30px;
+    padding-top: 26px;
     padding-left: 30px;
   }
 }

@@ -8,6 +8,24 @@
     grid-column: 2/3;
     grid-row: 2/3;
   }
+
+  @include vp-767 {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.footer-contacts::after {
+  @include vp-767 {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(100% + 22px);
+    width: 1000%;
+    height: 1px;
+    background-color: rgba(248, 253, 255, 0.7);
+    transform: translateX(-50%);
+  }
 }
 
 .footer-contacts h4 {
@@ -20,6 +38,38 @@
   letter-spacing: 0.05em;
   color: $white;
   text-transform: uppercase;
+
+  @include vp-767 {
+    margin-bottom: 21px;
+    position: relative;
+  }
+}
+
+@include vp-767 {
+  .footer-contacts h4::before {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: #e4e4e4;
+  }
+
+  .footer-contacts h4::after {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    content: "";
+    width: 15px;
+    height: 1px;
+    transform: rotate(90deg);
+    background-color: #e4e4e4;
+  }
+
+  .footer-contacts.is-active h4::after {
+    transform: rotate(180deg);
+  }
 }
 
 .footer-contacts__list {
@@ -30,16 +80,53 @@
 
 .footer-contacts__item:not(:last-of-type) {
   margin-bottom: 10px;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
+}
+
+.footer-contacts__item:last-of-type {
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+@include vp-767 {
+  .is-active .footer-contacts__list {
+    padding-bottom: 20px;
+  }
 }
 
 .footer-contacts__address {
-  margin-bottom: 10px;
-  color: rgba(255, 255, 255, 0.7);
   font-style: normal;
+  color: rgba(255, 255, 255, 0.7);
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    white-space: pre-line;
+  }
 }
 
 .footer-contacts__link {
-  font-weight: 400;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.footer-contacts__link:hover {
+  color: $neon-blue;
+}
+
+.footer-contacts__link:focus {
+  outline: 2px solid $neon-blue;
+}
+
+.footer-contacts__link:active {
+  opacity: 0.6;
 }

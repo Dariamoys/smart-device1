@@ -6,16 +6,28 @@
   margin: 0;
   margin-left: 10px;
   padding: 0;
+  padding-right: 50px;
   list-style-type: none;
 
   @include vp-1023 {
-    margin-bottom: 0;
+    align-self: center;
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    align-items: flex-start;
   }
 }
 
-.social-list__icon {
-  @include vp-767 {
-    width: 30px;
-    height: 30px;
-  }
+.social-list__link:hover {
+  color: $neon-blue;
+}
+
+.social-list__link:focus {
+  outline: 2px solid $neon-blue;
+}
+
+.social-list__link:active {
+  opacity: 0.6;
 }

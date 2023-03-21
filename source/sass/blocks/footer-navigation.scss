@@ -18,13 +18,21 @@
   @include vp-1023 {
     gap: 11px;
   }
-}
 
+  @include vp-767 {
+    padding-bottom: 20px;
+  }
+}
 
 .footer-navigation__link {
   font-weight: 400;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 .footer-navigation__link br {
@@ -33,4 +41,16 @@
   @include vp-1023 {
     display: none;
   }
+}
+
+.footer-navigation__link:hover {
+  color: $neon-blue;
+}
+
+.footer-navigation__link:focus {
+  outline: 2px solid $neon-blue;
+}
+
+.footer-navigation__link:active {
+  opacity: 0.6;
 }

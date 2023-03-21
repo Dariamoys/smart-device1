@@ -10,21 +10,12 @@
   }
 
   @include vp-767 {
-    ppadding-bottom: 90px;
+    padding-bottom: 88px;
   }
 }
 
 .feedback__wrapper {
   position: relative;
-  // // display: grid;
-  // // grid-template-columns: repeat(2, 1fr);
-  // display: flex;
-  // align-items: center;
-  // gap: 11.5vw;
-
-  // @include vp-1023 {
-  //   display: block;
-  // }
 }
 
 
@@ -74,7 +65,7 @@
   @include vp-767 {
     font-size: 30px;
     line-height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -90,158 +81,64 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 }
 
-.feedback-form__input-wrapper {
-  // display: flex;
-  // align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 30px;
-  margin-bottom: 20px;
-
-  @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+.feedback input:hover,
+.feedback textarea:hover {
+  opacity: 0.6;
 }
 
-.feedback-form__input-wrapper input {
-  box-sizing: border-box;
-  // min-width: 275px;
-  padding: 15px;
-  color: $white;
-  background: rgba(4, 20, 39, 0.15);
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  caret-color: $neon-blue;
-
-  @include vp-1023 {
-    min-width: 320px;
-  }
-
-  @include vp-767 {
-    min-width: auto;
-    width: 100%;
-  }
-
+.feedback input:focus,
+.feedback textarea:focus {
+  box-shadow: 0 3px 10px $dark-blue;
 }
 
-.feedback input::placeholder {
-  color: $white;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.feedback textarea {
-  width: 100%;
-  padding: 15px;
-  padding-top: 25px;
-  margin-bottom: 35px;
-  color: $white;
-  background: rgba(4, 20, 39, 0.15);
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  caret-color: $neon-blue;
-
-  @include vp-1023 {
-    padding-top: 32px;
-    margin-bottom: 29px;
-  }
-
-  @include vp-767 {
-    padding-top: 25px;
-    margin-bottom: 30px;
-  }
-}
-
-.feedback textarea::placeholder {
-  color: $white;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.feedback-form__button-wrapper {
-  display: flex;
-  align-items: flex-end;
-  gap: 50px;
-
-  @include vp-1023 {
-    gap: 85px;
-  }
-
-  @include vp-767 {
-    flex-direction: column;
-    gap: 25px;
-  }
-}
-
-.feedback-form__button {
-  padding: 14px 69px 10px;
-  background-color: $dark-blue;
-  min-width: 265px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-
-  @include vp-1023 {
-    line-height: 18px;
-  }
-}
-
-.feedback-form__button-wrapper input {
-  flex-shrink: 0;
-  position: relative;
-  width: 15px;
-  height: 15px;
-  border: 1px solid $white;
-  border-radius: 2px;
-  background-color: transparent;
-  appearance: none;
-}
-
-.feedback-form__button-wrapper input::after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: $color-transparent;
-  border: 1px solid $white;
-  border-radius: 2px;
-  appearance: none;
-  opacity: 0;
-}
-
-.feedback-form__button-wrapper input:checked::after {
-  top: 3px;
-  left: 2px;
-  width: 7px;
-  height: 5px;
-  border-color: $color-default-white;
-  border-radius: 0;
-  border-top-style: none;
-  border-right-style: none;
-  border-width: 1.5px;
-  transform: rotate(-45deg);
+.feedback input:active {
   opacity: 1;
 }
 
-.feedback-form__checkbox-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-}
+.feedback__content-wrapper .feedback__form label {
+  position: relative;
 
-.feedback-form__checkbox-wrapper span {
-  font-size: 14px;
-  line-height: 16px;
-  color: $white;
-  opacity: 0.8;
+  &.is-invalid {
+
+    input,
+    textarea {
+      border: 2px solid #ff1553;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba(#ff1553, 0.5);
+      }
+    }
+  }
+
+  &.is-valid {
+    input {
+      border: 2px solid #22b259;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba(#22b259, 0.5);
+      }
+    }
+  }
+
+  .input-message {
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+
+    &.is-invalid {
+      opacity: 1;
+      font-size: 14px;
+      color: #ff0000;
+    }
+
+    &.is-valid {
+      color: #15ab07;
+    }
+  }
 }

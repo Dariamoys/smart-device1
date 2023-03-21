@@ -59,9 +59,7 @@ textarea {
 // задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
   box-shadow: inset 0 0 0 1000px $light-blue-text;
-
   -webkit-text-fill-color: $dark-blue;
-  ;
 }
 
 // firefox placeholder \ invalid fix + ios bdrs
@@ -84,7 +82,6 @@ select {
 
 // ie11 X removal
 input {
-
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

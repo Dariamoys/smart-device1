@@ -18,7 +18,6 @@
 
   @include vp-767 {
     padding: 12px 43px;
-    max-width: 320px;
   }
 
   &--transparent {
@@ -39,6 +38,15 @@
     @include vp-1023 {
       padding: 14px 69px 10px;
     }
+
+    @include vp-767 {
+      padding: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &--white {
@@ -53,15 +61,30 @@
     @include vp-1023 {
       padding: 15px 50px;
     }
+
+    @include vp-767 {
+      padding: 8px 38px;
+    }
+  }
+
+  &--modal {
+    width: 100%;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    opacity: 0.6;
+    border: none;
+    outline: 2px solid $neon-blue;
   }
 }
