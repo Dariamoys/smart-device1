@@ -21,17 +21,19 @@ export class Accordions {
 
     evt.preventDefault();
     const parent = target.closest('[data-accordion="parent"]');
-
     if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
       return;
     }
 
     const element = target.closest('[data-accordion="element"]');
+    const button = document.querySelector('[data-accordion="button"]');
     if (element.classList.contains('is-active')) {
       this.closeAccordion(element);
+      button.textContent = 'Подробнее';
       return;
     }
     this.openAccordion(element);
+    button.textContent = 'Скрыть';
   }
 
   _windowResizeHandler() {

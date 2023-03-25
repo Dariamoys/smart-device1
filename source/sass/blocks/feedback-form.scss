@@ -84,20 +84,8 @@
   }
 }
 
-.feedback-form__button {
-  padding: 14px 69px 10px;
-  background-color: $dark-blue;
-  min-width: 265px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-
-  @include vp-1023 {
-    line-height: 18px;
-  }
-}
-
 .feedback-form__button-wrapper input {
+  position: relative;
   flex-shrink: 0;
   width: 15px;
   height: 15px;
@@ -120,8 +108,8 @@
 }
 
 .feedback-form__button-wrapper input:checked::after {
-  top: 3px;
-  left: 2px;
+  top: 4px;
+  left: 5px;
   width: 7px;
   height: 5px;
   border-color: $color-default-white;

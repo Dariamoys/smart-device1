@@ -35,8 +35,6 @@
 }
 
 .social__logo {
-  margin-bottom: 30px;
-
   @include vp-1023 {
     margin-bottom: 0;
   }

@@ -131,9 +131,9 @@ module.exports = {
     'at-rule-no-vendor-prefix': true,
     'at-rule-semicolon-newline-after': 'always',
 
-    indentation: [2, {ignore: ['inside-parens']}],
+    indentation: [2, { ignore: ['inside-parens'] }],
 
-    'max-nesting-depth': [4, {ignoreAtRules: ['media', 'include']}],
+    'max-nesting-depth': [4, { ignoreAtRules: ['media', 'include'] }],
 
     'max-empty-lines': 2,
     'no-eol-whitespace': true,

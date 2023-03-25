@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-right: 63px;
 
   @include vp-1023 {
