@@ -4,29 +4,43 @@
   list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 86px;
   flex-wrap: wrap;
-  min-width: 438px;
   margin-right: 20px;
 
   @include vp-1023 {
-    min-width: auto;
-    margin-right: 0;
-    padding-bottom: 10px;
+    align-self: flex-start;
+    padding-right: 3px;
+    margin: 0;
+    gap: 26px;
+  }
+
+  @include vp-769 {
+    gap: 40px;
+    padding-right: 20px;
+    padding-top: 3px;
   }
 }
 
 .contacts-list__link {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center;ы
+  gap: 20px;
+  padding: 5px;
   color: $light-blue-text;
 
   @include vp-1023 {
-    justify-content: flex-end;
-    align-items: center;
+    padding: 0;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
   }
 
+
+  @include vp-769 {
+    width: 20px;
+    height: 20px;
+  }
 
   @include focus {
     outline: 2px solid $neon-blue;
@@ -41,17 +55,10 @@
   color: $white;
 }
 
-.contacts-list__icon {
-  margin-right: 15px;
-}
-
-
 .contacts-list__text {
-  @media (max-width: $vp-1023) {
+  display: block;
+
+  @include vp-1023 {
     display: none;
   }
-}
-
-.contacts-list__item:not(:last-of-type) {
-  margin-right: 20px;
 }

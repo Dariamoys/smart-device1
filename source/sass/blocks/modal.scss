@@ -40,7 +40,7 @@
     min-height: 100%;
     padding: 60px 40px;
 
-    @include vp-767 {
+    @include vp-769 {
       padding: 60px 16px;
     }
   }
@@ -64,7 +64,7 @@
 
     background-color: $neon-blue;
 
-    @include vp-767 {
+    @include vp-769 {
       width: 100%;
       padding: 20px;
     }
@@ -95,7 +95,7 @@
     .modal__content {
       width: auto;
 
-      @include vp-767 {
+      @include vp-769 {
         width: 100%;
       }
     }
@@ -118,9 +118,9 @@
   }
 }
 
-.modal__feedback-form h4 {
+.modal__feedback-form h5 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-family: $title-font-family;
   font-weight: 400;
   font-size: 30px;

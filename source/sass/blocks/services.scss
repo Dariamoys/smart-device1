@@ -1,5 +1,5 @@
 .services {
-  padding-top: 70px;
+  padding-top: 67px;
   padding-bottom: 140px;
   background-color: $dark-blue;
 
@@ -8,7 +8,7 @@
     padding-bottom: 79px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     padding-top: 46px;
     padding-bottom: 86px;
   }
@@ -21,6 +21,10 @@
   height: 100%;
   cursor: pointer;
   display: block;
+
+  @include vp-1023 {
+    min-height: 250px;
+  }
 }
 
 .services__link:hover,
@@ -45,7 +49,7 @@
     margin-bottom: 33px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     display: none;
   }
 }
@@ -53,7 +57,7 @@
 .services h4 {
   display: none;
 
-  @include vp-767 {
+  @include vp-769 {
     display: block;
     margin: 0;
     margin-bottom: 28px;
@@ -90,11 +94,6 @@
     width: 100%;
     min-height: 250px;
   }
-
-  @include vp-767 {
-    max-width: 270px;
-    min-width: auto;
-  }
 }
 
 .services__image-wrapper {
@@ -119,7 +118,7 @@
     padding-left: 45px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     padding-top: 26px;
     padding-left: 30px;
   }
@@ -133,7 +132,7 @@
   line-height: 30px;
   color: $white;
 
-  @include vp-767 {
+  @include vp-769 {
     font-size: 18px;
   }
 }
@@ -152,7 +151,7 @@
   border-radius: 3px 0 0 0;
   border: none;
 
-  @include vp-767 {
+  @include vp-769 {
     width: 40px;
     height: 40px;
   }
@@ -169,8 +168,15 @@
     height: 250px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     min-width: auto;
-    max-width: 270px;
+  }
+}
+
+.services__icon {
+  padding-left: 5px;
+
+  @include vp-769 {
+    padding-left: 3px;
   }
 }

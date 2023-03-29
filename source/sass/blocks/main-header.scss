@@ -1,6 +1,6 @@
 .main-header {
   z-index: 100;
-  padding-top: 26px;
+  padding-top: 25px;
   padding-bottom: 20px;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   position: fixed;
@@ -10,12 +10,12 @@
   text-align: center;
 
   @include vp-1023 {
-    position: relative;
+    position: absolute;
     min-height: 100px;
     padding-top: 18px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     min-height: 70px;
     padding-top: 16px;
   }
@@ -29,21 +29,21 @@
   padding-right: 63px;
 
   @include vp-1023 {
-    padding-right: 21px;
+    padding-right: 17px;
     align-items: center;
   }
 
-  @include vp-767 {
-    padding-right: 8px;
+  @include vp-769 {
+    padding-right: 0;
   }
 }
 
 .main-header__logo {
-  margin-right: 39px;
+  margin-right: 25px;
 }
 
 .main-header__button {
-  @media (max-width: $vp-1023) {
+  @media (max-width: $vp-1024) {
     display: none;
   }
 }

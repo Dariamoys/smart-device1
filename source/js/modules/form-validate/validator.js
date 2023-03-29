@@ -116,32 +116,6 @@ export class Validator {
     return flag;
   }
 
-  _findSelectedOption(options) {
-    let flag = false;
-    options.forEach((option) => {
-      if (option.value && option.selected) {
-        flag = true;
-      }
-    });
-    return flag;
-  }
-
-  _validateSelect(parent, input) {
-    const options = input.querySelectorAll('option');
-    const customSelectText = parent.querySelector('.custom-select__text');
-    input.setAttribute('aria-invalid', 'false');
-    let flag = true;
-    if (this._findSelectedOption(options)) {
-      this._setItemValidState(parent, input);
-    } else {
-      this._setItemInvalidState(parent, input);
-      parent.classList.remove('not-empty');
-      customSelectText.innerHTML = '';
-      flag = false;
-    }
-    return flag;
-  }
-
   _returnCheckedElements(inputs) {
     let flag = false;
     inputs.forEach((input) => {
@@ -233,8 +207,6 @@ export class Validator {
         return this._validatePhoneInput(parent, input);
       case 'checkbox':
         return this._validateCheckbox(parent, input);
-      case 'select':
-        return this._validateSelect(parent, input);
       case 'toggle-group':
         return this._validateToggleGroup(parent, input);
       case 'file':
@@ -253,7 +225,7 @@ export class Validator {
     }
 
     if (!parent.hasAttribute('data-required')) {
-      const removeElement = parent.querySelector('input') || parent.querySelector('select') || parent.querySelector('textarea');
+      const removeElement = parent.querySelector('input') || parent.querySelector('textarea');
 
       if (!removeElement.value) {
         parent.classList.remove('is-valid');
@@ -281,7 +253,7 @@ export class Validator {
   _fullValidate(items) {
     let result = true;
     items.forEach((item) => {
-      const formElement = item.querySelector('input') || item.querySelector('select') || item.querySelector('textarea');
+      const formElement = item.querySelector('input') || item.querySelector('textarea');
       this.validateFormElement(formElement, true);
       if (item.classList.contains('is-invalid')) {
         result = false;

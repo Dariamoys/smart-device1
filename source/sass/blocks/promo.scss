@@ -1,13 +1,15 @@
 .promo {
   position: relative;
-  height: 877px;
+  min-height: 877px;
 
   @include vp-1023 {
-    height: 540px;
+    min-height: 540px;
+    padding-top: 100px;
   }
 
-  @include vp-767 {
-    height: 490px;
+  @include vp-769 {
+    min-height: 490px;
+    padding-top: 73px;
   }
 }
 
@@ -22,28 +24,34 @@
   background-color: #374758;
 }
 
-.promo img {
+.promo__image-wrapper {
   position: absolute;
+  top: 0;
   min-width: 320px;
   width: 100vw;
-  object-fit: cover;
-  top: -118px;
+  height: 100%;
   z-index: -1;
-  height: 993px;
+  min-height: 873px;
 
   @include vp-1023 {
-    height: 657px;
+    min-height: 540px;
   }
 
-  @include vp-767 {
-    height: 608px;
+  @include vp-769 {
+    min-height: 490px;
   }
+}
+
+.promo img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
 }
 
 .promo__content {
   padding-top: 302px;
-  padding-left: 169px;
-  padding-bottom: 280px;
+  padding-left: 161px;
+  padding-bottom: 276px;
 
   @include vp-1023 {
     padding-top: 78px;
@@ -51,7 +59,7 @@
     padding-bottom: 205px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     padding-top: 78px;
     padding-left: 25px;
     padding-bottom: 190px;
@@ -74,7 +82,7 @@
     line-height: 75px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     margin-bottom: 8px;
     font-size: 36px;
     line-height: 42px;
@@ -92,7 +100,7 @@
     margin-bottom: 58px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     margin-bottom: 44px;
     font-size: 14px;
     line-height: 22px;
@@ -100,7 +108,7 @@
 }
 
 .promo p br {
-  @include vp-767 {
+  @include vp-769 {
     display: none;
   }
 }
@@ -115,7 +123,7 @@
     line-height: 21px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     margin-left: 0;
     width: auto;
     font-size: 14px;
@@ -127,7 +135,7 @@
 .promo__fulltext {
   display: block;
 
-  @media (max-width: $vp-768) {
+  @media (max-width: $vp-770) {
     display: none;
   }
 }
@@ -135,7 +143,7 @@
 .promo__shorttext {
   display: none;
 
-  @media (max-width: $vp-768) {
+  @media (max-width: $vp-770) {
     display: block;
   }
 }

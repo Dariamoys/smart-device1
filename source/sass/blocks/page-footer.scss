@@ -8,7 +8,7 @@
     padding-bottom: 61px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     padding-top: 35px;
   }
 }
@@ -24,7 +24,7 @@
     column-gap: 130px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: $vp-768) {
+@media (max-width: $vp-770) {
   .page-footer h2::before,
   .page-footer__accordion h2::after {
     transition: $trans-default;

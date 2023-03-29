@@ -13,13 +13,15 @@
   gap: 10px;
   margin: 0;
   padding: 0;
+  padding-left: 2px;
+  padding-top: 2px;
   list-style-type: none;
 
   @include vp-1023 {
     gap: 11px;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     padding-bottom: 20px;
   }
 }
@@ -29,7 +31,7 @@
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
 
-  @include vp-767 {
+  @include vp-769 {
     font-size: 14px;
     line-height: 19px;
   }

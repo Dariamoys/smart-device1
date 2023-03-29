@@ -5,14 +5,14 @@
     padding-top: 0;
   }
 
-  @include vp-767 {
+  @include vp-769 {
     position: relative;
     width: 100%;
   }
 }
 
 .site-menu::after {
-  @include vp-767 {
+  @include vp-769 {
     content: "";
     position: absolute;
     bottom: 0;
@@ -24,9 +24,21 @@
   }
 }
 
-.site-menu h4 {
-  margin: 0;
+.site-menu__title-wrapper {
   margin-bottom: 23px;
+
+  @include vp-1023 {
+    margin-bottom: 19px;
+  }
+
+  @include vp-769 {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-menu h5 {
+  margin: 0;
   font-family: $title-font-family;
   font-weight: 400;
   font-size: 15px;
@@ -35,38 +47,58 @@
   color: $white;
   text-transform: uppercase;
 
-  @include vp-1023 {
-    margin-bottom: 19px;
-  }
 
-  @include vp-767 {
+  @include vp-769 {
     position: relative;
+    margin-right: auto;
   }
 }
 
-@include vp-767 {
-  .site-menu h4::before {
-    position: absolute;
-    top: 2px;
-    right: 0;
-    content: "";
-    width: 15px;
-    height: 1px;
-    background-color: #e4e4e4;
-  }
+.site-menu__button {
+  display: none;
 
-  .site-menu h4::after {
-    position: absolute;
-    top: 2px;
-    right: 0;
-    content: "";
-    width: 15px;
-    height: 1px;
-    transform: rotate(90deg);
-    background-color: #e4e4e4;
-  }
+  @include vp-769 {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
 
-  .site-menu.is-active h4::after {
-    transform: rotate(180deg);
+    &::before {
+      position: absolute;
+      top: 9px;
+      left: 3px;
+      content: "";
+      width: 15px;
+      height: 1px;
+      background-color: #e4e4e4;
+    }
+
+    &::after {
+      position: absolute;
+      top: 9px;
+      left: 3px;
+      content: "";
+      width: 15px;
+      height: 1px;
+      transform: rotate(90deg);
+      background-color: #e4e4e4;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      opacity: 0.6;
+      border: none;
+      outline: 2px solid $neon-blue;
+    }
   }
+}
+
+.site-menu.is-active .site-menu__button::after {
+  transform: rotate(180deg);
 }
