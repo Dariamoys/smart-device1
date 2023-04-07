@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -40,7 +40,7 @@
     min-height: 100%;
     padding: 60px 40px;
 
-    @include vp-769 {
+    @include vp-767 {
       padding: 60px 16px;
     }
   }
@@ -64,7 +64,7 @@
 
     background-color: $neon-blue;
 
-    @include vp-769 {
+    @include vp-767 {
       width: 100%;
       padding: 20px;
     }
@@ -95,7 +95,7 @@
     .modal__content {
       width: auto;
 
-      @include vp-769 {
+      @include vp-767 {
         width: 100%;
       }
     }

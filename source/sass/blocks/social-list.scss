@@ -1,5 +1,6 @@
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -15,7 +16,7 @@
     margin-left: 0;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     align-items: flex-start;
   }
 }

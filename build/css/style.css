@@ -448,6 +448,12 @@ body {
   background-color: #f8fdff;
 }
 
+main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 a {
   color: #041827;
   text-decoration: none;
@@ -668,6 +674,7 @@ button,
 
 .button--transparent {
   min-width: 160px;
+  max-width: 160px;
   padding: 10px 15px;
   background-color: transparent;
   border: #f2f5f6 1px solid;
@@ -1121,6 +1128,8 @@ button,
 .services__item img {
   width: 350px;
   min-height: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
 }
 
 .services__icon {
@@ -1258,6 +1267,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1442,7 +1453,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -1791,6 +1802,11 @@ button,
   -ms-flex-align: center;
   align-items: center;
   gap: 11px;
+  cursor: pointer;
+}
+
+.feedback-form__checkbox-wrapper input {
+  cursor: pointer;
 }
 
 .feedback-form__checkbox-wrapper span {
@@ -1842,7 +1858,13 @@ button,
   height: 100%;
 }
 
-@media (max-width: 1279px) {
+@media only screen and (max-width: 1279px) {
+  .services__list {
+    -webkit-column-gap: 45px;
+    -moz-column-gap: 45px;
+    column-gap: 45px;
+  }
+
   .feedback__image-wrapper img {
     width: 408px;
     height: 228px;
@@ -1853,13 +1875,7 @@ button,
   }
 }
 
-@media (max-width: 1024px) {
-  .main-header__button {
-    display: none;
-  }
-}
-
-@media (max-width: 1023px) {
+@media only screen and (max-width: 1023px) {
   .container {
     padding: 0 50px;
   }
@@ -2164,57 +2180,13 @@ button,
   }
 }
 
-@media (max-width: 770px) {
-  .logo__img {
-    width: 35px;
-    height: 35px;
-  }
-
-  .promo__fulltext {
+@media (max-width: 1023px) {
+  .main-header__button {
     display: none;
-  }
-
-  .promo__shorttext {
-    display: block;
-  }
-
-  .page-footer h2::before,
-  .page-footer__accordion h2::after {
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-    opacity: 0;
-  }
-
-  .page-footer__accordion h2::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 14px;
-    right: 29px;
-    width: 14px;
-    height: 1px;
-    background-color: #e4e4e4;
-    opacity: 1;
-  }
-
-  .page-footer__accordion h2::after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 14px;
-    right: 29px;
-    width: 14px;
-    height: 1px;
-    background-color: #e4e4e4;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    opacity: 1;
   }
 }
 
-@media (max-width: 769px) {
+@media only screen and (max-width: 767px) {
   .container {
     padding: 0 26px;
   }
@@ -2727,7 +2699,57 @@ button,
   }
 }
 
-@media (max-width: 769px) and (hover: hover) {
+@media (max-width: 767px) {
+  .logo__img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .promo__fulltext {
+    display: none;
+  }
+
+  .promo__shorttext {
+    display: block;
+  }
+
+  .page-footer h2::before,
+  .page-footer__accordion h2::after {
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+
+  .page-footer__accordion h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 14px;
+    right: 29px;
+    width: 14px;
+    height: 1px;
+    background-color: #e4e4e4;
+    opacity: 1;
+  }
+
+  .page-footer__accordion h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 14px;
+    right: 29px;
+    width: 14px;
+    height: 1px;
+    background-color: #e4e4e4;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) and (hover: hover) {
   .site-menu__button:hover:not(.focus-visible) {
     opacity: 0.6;
     border: none;

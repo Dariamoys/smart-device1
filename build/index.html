@@ -18,14 +18,14 @@
         <div class="main-header__wrapper">
           <a class="main-header__logo logo" href="index.html" aria-label="Главная страница">
             <picture>
-              <source media="(max-width: 770px)" srcset="img/background-image/icons/logo-mobile.svg" width="35" height="35">
+              <source media="(max-width: 767px)" srcset="img/background-image/icons/logo-mobile.svg" width="35" height="35">
               <img class="logo__img" src="img/background-image/icons/logo-desktop.svg" width="215" height="55" alt="Логотип магазина печатных плат Smart Device">
             </picture>
           </a>
           <ul class="main-header__list contacts-list list">
             <li class="contacts-list__item">
               <a class="contacts-list__link" href="mailto:info@sd.ru" aria-label="Написать в магазин Smart Device">
-                <svg class="contacts-list__icon" aria-hidden="true" focusable="false" width="20" height="20">
+                <svg class="contacts-list__icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false" width="20" height="20">
                   <use xlink:href="img/sprite.svg#mail"></use>
                 </svg>
                 <span class="contacts-list__text">info@sd.ru</span>
@@ -33,7 +33,7 @@
             </li>
               <li class="contacts-list__item">
               <a class="contacts-list__link" href="tel:+74950005252" aria-label="Позвонить в магазин Smart Device">
-                  <svg class="contacts-list__icon" aria-hidden="true" focusable="false" width="19" height="20">
+                  <svg class="contacts-list__icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false" width="19" height="20">
                     <use xlink:href="img/sprite.svg#phone"></use>
                   </svg>
                   <span class="contacts-list__text">+7 (495) 000 52 52</span>
@@ -70,14 +70,14 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="features__list list">
             <li class="features__item">
-              <svg class="features__icon" aria-hidden="true" focusable="false" width="40" height="40">
+              <svg class="features__icon" viewBox="0 0 35 35" aria-hidden="true" focusable="false" width="35" height="35">
                 <use xlink:href="img/sprite.svg#clock"></use>
               </svg>
               <h3 class="features__title">Оперативные сроки</h3>
               <p class="features__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
             </li>
             <li class="features__item">
-              <svg class="features__icon" aria-hidden="true" focusable="false" width="40" height="40">
+              <svg class="features__icon" viewBox="0 0 35 35" aria-hidden="true" focusable="false" width="35" height="35">
                 <use xlink:href="img/sprite.svg#provider"></use>
               </svg>
               <h3 class="features__title">Крупные поставщики</h3>
@@ -85,7 +85,7 @@
               </p>
             </li>
             <li class="features__item features__item--short">
-              <svg class="features__icon" aria-hidden="true" focusable="false" width="40" height="40">
+              <svg class="features__icon" viewBox="0 0 35 35" aria-hidden="true" focusable="false" width="35" height="35">
                 <use xlink:href="img/sprite.svg#confidential"></use>
               </svg>
               <h3 class="features__title">Полная конфиденциальность</h3>
@@ -93,11 +93,11 @@
               </p>
             </li>
             <li class="features__item features__item--short">
-              <svg class="features__icon" aria-hidden="true" focusable="false" width="40" height="40">
+              <svg class="features__icon" viewBox="0 0 35 35" aria-hidden="true" focusable="false" width="35" height="35">
                 <use xlink:href="img/sprite.svg#price-tag"></use>
               </svg>
               <h3 class="features__title">Персонализация стоимости</h3>
-              <p class="features__text">Мы&nbsp;подбираем <br> определенную фабрику, поставщиков, вид <br> доставки, чтобы <br> установить ту&nbsp;цену, <br> которая Вас устраивает.
+              <p class="features__text">Мы&nbsp;подбираем определенную&nbsp; фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.
               </p>
             </li>
           </ul>
@@ -214,11 +214,11 @@
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
                 <div class="feedback-form__input-wrapper">
-                  <label for="name" data-required data-validate-type="text" data-limitation="letters" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
-                    <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Укажите ваше имя" required data-focus>
+                  <label for="name" data-required data-validate-type="text" data-limitation="name" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
+                    <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Имя" aria-label="Укажите ваше имя" autocomplete="off" required data-focus>
                   </label>
                   <label for="phone" data-required data-validate-type="phone" data-message-base="Обязательное поле" data-message-extra="Проверьте корректность заполнения поля">
-                    <input class="feedback-form__input" type="tel" name="tel" id="phone" placeholder="Телефон" aria-label="Укажите ваш номер телефона" required>
+                    <input class="feedback-form__input" type="tel" name="tel" id="phone" placeholder="Телефон" aria-label="Укажите ваш номер телефона" required  autocomplete="off">
                   </label>
                 </div>
                 <label for="question">
@@ -246,21 +246,21 @@
             <ul class="social__social-list social-list list">
               <li class="social-list__item">
                 <a class="social-list__link social-list__link--ok" href="#" target="_blank" aria-label="Перейти на нашу страницу в Одноклассниках">
-                  <svg class="social-list__icon" aria-hidden="true" focusable="false" width="40" height="40">
+                  <svg class="social-list__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false" width="40" height="40">
                     <use xlink:href="img/sprite.svg#ok"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item">
                 <a class="social-list__link social-list__link--vk" href="#" target="_blank" aria-label="Перейти на нашу страницу Вконтакте">
-                  <svg class="social-list__icon" aria-hidden="true" focusable="false" width="40" height="40">
+                  <svg class="social-list__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false" width="40" height="40">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-list__item">
                 <a class="social-list__link social-list__link--pinterest" href="#" target="_blank" aria-label="Перейти на нашу страницу в Пинтерест">
-                  <svg class="social-list__icon" aria-hidden="true" focusable="false" width="40" height="40">
+                  <svg class="social-list__icon" viewBox="0 0 40 40" aria-hidden="true" focusable="false" width="40" height="40">
                     <use xlink:href="img/sprite.svg#pinterest"></use>
                   </svg>
                 </a>
@@ -334,7 +334,7 @@
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+            <svg viewBox="0 0 20 20" width="20" height="20">
               <use xlink:href="img/sprite.svg#close-button"></use>
             </svg>
           </button>
@@ -352,7 +352,7 @@
               </div>
               <textarea name="question" placeholder="Ваш вопрос" rows="6" aria-label="Задайте ваш вопрос"></textarea>
               <div class="feedback-form__button-wrapper feedback-form__button-wrapper--modal">
-                <button class="feedback-form__button button button--dark button--modal" type="submit">Задать вопрос</button>
+                <button class="feedback-form__button button button--dark button--modal" type="submit">Отправить</button>
                 <label class="feedback-form__checkbox-wrapper" data-required data-validate-type="checkbox" data-message-base="Обязательное поле">
                   <input type="checkbox" name="approval" aria-label="Согласие на обработку персональных данных">
                   <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>

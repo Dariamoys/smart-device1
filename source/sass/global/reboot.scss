@@ -36,6 +36,10 @@ body {
   background-color: $light-blue-background;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
 a {
   color: $dark-blue;
   text-decoration: none;

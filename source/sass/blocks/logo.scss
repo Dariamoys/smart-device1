@@ -12,14 +12,14 @@
   width: 215px;
   height: 55px;
 
-  @media (max-width: $vp-770) {
+  @media (max-width: 767px) {
     width: 35px;
     height: 35px;
   }
 }
 
 .logo__img--footer {
-  @include vp-769 {
+  @include vp-767 {
     width: 215px;
     height: 55px;
   }

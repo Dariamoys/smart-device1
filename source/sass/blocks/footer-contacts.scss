@@ -9,14 +9,14 @@
     grid-row: 2/3;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     width: 100%;
     position: relative;
   }
 }
 
 .footer-contacts::after {
-  @include vp-769 {
+  @include vp-767 {
     content: "";
     position: absolute;
     bottom: 0;
@@ -31,7 +31,7 @@
 .footer-contacts__title-wrapper {
   margin-bottom: 20px;
 
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 21px;
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@
   color: $white;
   text-transform: uppercase;
 
-  @include vp-769 {
+  @include vp-767 {
     margin-right: auto;
   }
 }
@@ -56,7 +56,7 @@
 .footer-contacts__button {
   display: none;
 
-  @include vp-769 {
+  @include vp-767 {
     position: relative;
     display: block;
     width: 20px;
@@ -112,18 +112,18 @@
 .footer-contacts__item:not(:last-of-type) {
   margin-bottom: 10px;
 
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 12px;
   }
 }
 
 .footer-contacts__item:last-of-type {
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 20px;
   }
 }
 
-@include vp-769 {
+@include vp-767 {
   .is-active .footer-contacts__list {
     padding-bottom: 20px;
   }
@@ -133,7 +133,7 @@
   font-style: normal;
   color: rgba(255, 255, 255, 0.7);
 
-  @include vp-769 {
+  @include vp-767 {
     font-size: 14px;
     line-height: 19px;
     white-space: pre-line;
@@ -144,7 +144,7 @@
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
 
-  @include vp-769 {
+  @include vp-767 {
     font-size: 14px;
     line-height: 19px;
   }

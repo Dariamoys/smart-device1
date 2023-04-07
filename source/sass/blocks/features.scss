@@ -1,11 +1,11 @@
 .features {
   padding-top: 120px;
 
-  @include vp-1023 {
+  @media only screen and (max-width: 1023px) {
     padding-top: 80px;
   }
 
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     padding-top: 48px;
   }
 }
@@ -19,11 +19,11 @@
   padding: 0;
   list-style-type: none;
 
-  @include vp-1023 {
+  @media only screen and (max-width: 1023px) {
     row-gap: 27px;
   }
 
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     row-gap: 31px;
@@ -39,14 +39,14 @@
   padding-right: 30px;
   border: 1px solid #ebebeb;
 
-  @include vp-1023 {
+  @media only screen and (max-width: 1023px) {
     min-height: 360px;
     padding-top: 39px;
     padding-left: 41px;
     padding-right: 10px;
   }
 
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     min-height: 340px;
     padding-top: 33px;
     padding-left: 28px;
@@ -61,14 +61,14 @@
     height: 100%;
     background-color: $neon-blue;
 
-    @include vp-1023 {
+    @media only screen and (max-width: 1023px) {
       left: -4px;
     }
   }
 }
 
 .features__item--short {
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     min-height: 325px;
     padding-top: 28px;
   }
@@ -82,11 +82,11 @@
   line-height: 34px;
   color: $neon-blue;
 
-  @include vp-1023 {
+  @media only screen and (max-width: 1023px) {
     margin-bottom: 4px;
   }
 
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     margin-bottom: 8px;
     font-size: 20px;
     line-height: 28px;
@@ -94,7 +94,7 @@
 }
 
 .features__item--short h3 {
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     margin-top: 6px;
     margin-bottom: 13px;
   }
@@ -104,7 +104,7 @@
   margin: 0;
   line-height: 22px;
 
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     font-size: 14px;
     line-height: 19px;
   }
@@ -113,7 +113,7 @@
 .features br {
   display: none;
 
-  @include vp-1023 {
+  @media only screen and (max-width: 1023px) {
     display: block;
   }
 }
@@ -122,11 +122,11 @@
   margin-bottom: 6px;
   color: $neon-blue;
 
-  @include vp-1023 {
+  @media only screen and (max-width: 1023px) {
     margin-bottom: 8px;
   }
 
-  @include vp-769 {
+  @media only screen and (max-width: 767px) {
     width: 30px;
     height: 30px;
   }

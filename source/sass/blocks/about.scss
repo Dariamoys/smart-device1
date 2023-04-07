@@ -9,7 +9,7 @@
     padding-bottom: 79px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-top: 46px;
     padding-bottom: 82px;
   }
@@ -35,7 +35,7 @@
     margin-right: 24px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     display: none;
   }
 }
@@ -55,7 +55,7 @@
     padding-left: 173px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-left: 0;
   }
 }
@@ -67,7 +67,7 @@
   font-size: 36px;
   line-height: 51px;
 
-  @include vp-769 {
+  @include vp-767 {
     font-size: 28px;
     line-height: 39px;
   }
@@ -80,7 +80,7 @@
     margin-bottom: 23px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 13px;
   }
 }
@@ -89,7 +89,7 @@
   margin: 0;
   margin-top: 15px;
 
-  @include vp-769 {
+  @include vp-767 {
     font-size: 14px;
     line-height: 19px;
   }
@@ -102,13 +102,13 @@
     margin-bottom: 23px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 0;
   }
 }
 
 .about__text-mobile {
-  @include vp-769 {
+  @include vp-767 {
     display: none;
   }
 }

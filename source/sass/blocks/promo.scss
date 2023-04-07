@@ -7,7 +7,7 @@
     padding-top: 100px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     min-height: 490px;
     padding-top: 73px;
   }
@@ -37,7 +37,7 @@
     min-height: 540px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     min-height: 490px;
   }
 }
@@ -59,7 +59,7 @@
     padding-bottom: 205px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-top: 78px;
     padding-left: 25px;
     padding-bottom: 190px;
@@ -82,7 +82,7 @@
     line-height: 75px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 8px;
     font-size: 36px;
     line-height: 42px;
@@ -100,7 +100,7 @@
     margin-bottom: 58px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 44px;
     font-size: 14px;
     line-height: 22px;
@@ -108,7 +108,7 @@
 }
 
 .promo p br {
-  @include vp-769 {
+  @include vp-767 {
     display: none;
   }
 }
@@ -123,7 +123,7 @@
     line-height: 21px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-left: 0;
     width: auto;
     font-size: 14px;
@@ -135,7 +135,7 @@
 .promo__fulltext {
   display: block;
 
-  @media (max-width: $vp-770) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
@@ -143,7 +143,7 @@
 .promo__shorttext {
   display: none;
 
-  @media (max-width: $vp-770) {
+  @media (max-width: 767px) {
     display: block;
   }
 }
