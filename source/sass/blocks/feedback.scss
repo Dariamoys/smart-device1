@@ -98,7 +98,8 @@
   opacity: 1;
 }
 
-.feedback__content-wrapper .feedback__form label {
+.feedback__form label,
+.feedback-form--modal label {
   position: relative;
 
   &.is-invalid {

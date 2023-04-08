@@ -20,7 +20,8 @@
   list-style-type: none;
 
   @media only screen and (max-width: 1023px) {
-    row-gap: 27px;
+    row-gap: 30px;
+    column-gap: 45px;
   }
 
   @media only screen and (max-width: 767px) {
@@ -83,7 +84,7 @@
   color: $neon-blue;
 
   @media only screen and (max-width: 1023px) {
-    margin-bottom: 4px;
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 767px) {
@@ -94,6 +95,10 @@
 }
 
 .features__item--short h3 {
+  @media only screen and (max-width: 1023px) {
+    margin-bottom: 3px;
+  }
+
   @media only screen and (max-width: 767px) {
     margin-top: 6px;
     margin-bottom: 13px;
@@ -119,7 +124,7 @@
 }
 
 .features__icon {
-  margin-bottom: 6px;
+  margin-bottom: 14px;
   color: $neon-blue;
 
   @media only screen and (max-width: 1023px) {

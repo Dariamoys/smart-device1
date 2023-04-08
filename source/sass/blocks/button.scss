@@ -24,7 +24,7 @@
 
   &--transparent {
     min-width: 160px;
-    max-width: 160px;
+    max-width: 200px;
     padding: 10px 15px;
     background-color: transparent;
     border: $light-blue-text 1px solid;
@@ -36,7 +36,8 @@
 
   &--dark {
     padding: 12px 20px;
-    min-width: 265px;
+    min-width: 150px;
+    flex-basis: 265px;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -50,6 +51,7 @@
     @include vp-767 {
       min-width: 100%;
       padding: 15px 15px;
+      flex-basis: auto;
     }
   }
 
@@ -74,6 +76,7 @@
   }
 
   &--modal {
+    flex-basis: auto;
     width: 100%;
     padding: 0;
     padding-top: 15px;
@@ -85,8 +88,11 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  @include hover {
     opacity: 0.6;
+  }
+
+  @include focus {
     border: none;
     outline: 2px solid $neon-blue;
   }

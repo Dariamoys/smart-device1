@@ -21,12 +21,7 @@
   outline: none;
   caret-color: $neon-blue;
 
-  @include vp-1023 {
-    min-width: 320px;
-  }
-
   @include vp-767 {
-    min-width: auto;
     width: 100%;
   }
 }
@@ -42,7 +37,7 @@
   width: 100%;
   padding: 15px;
   padding-top: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
   color: $white;
   background: rgba(4, 20, 39, 0.15);
   border: none;
@@ -71,8 +66,13 @@
 
 .feedback-form__button-wrapper {
   display: flex;
+  order: 1;
   align-items: flex-end;
   gap: 50px;
+
+  @include vp-1279 {
+    gap: 25px;
+  }
 
   @include vp-1023 {
     gap: 85px;
@@ -81,7 +81,8 @@
 
   @include vp-767 {
     flex-direction: column;
-    gap: 19px;
+    align-items: flex-start;
+    gap: 22px;
   }
 }
 
@@ -124,6 +125,8 @@
 
 .feedback-form__checkbox-wrapper {
   display: flex;
+  order: 2;
+  flex-shrink: 0;
   align-items: center;
   gap: 11px;
   cursor: pointer;

@@ -35,6 +35,17 @@
     margin-bottom: 21px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      opacity: 0.6;
+      border: none;
+    }
   }
 }
 
@@ -63,6 +74,7 @@
     height: 20px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 
     &::before {
       position: absolute;

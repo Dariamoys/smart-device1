@@ -1,15 +1,21 @@
 .contacts-list {
   margin: 0;
   padding: 0;
+  padding-left: 27px;
   list-style-type: none;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 86px;
   flex-wrap: wrap;
-  margin-right: 20px;
+  flex-basis: 480px;
+
+  @include vp-1279 {
+    flex-basis: 400px;
+  }
 
   @include vp-1023 {
     align-self: flex-start;
+    flex-basis: auto;
     padding-right: 3px;
     margin: 0;
     gap: 26px;
@@ -17,7 +23,7 @@
 
   @include vp-767 {
     gap: 40px;
-    padding-right: 20px;
+    padding-right: 21px;
     padding-top: 3px;
   }
 }

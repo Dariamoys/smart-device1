@@ -19,7 +19,7 @@
 }
 
 .logo__img--footer {
-  @include vp-767 {
+  @media (max-width: 767px) {
     width: 215px;
     height: 55px;
   }

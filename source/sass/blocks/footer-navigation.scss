@@ -2,6 +2,10 @@
   display: flex;
   gap: 54px;
 
+  @include vp-1279 {
+    gap: 20px;
+  }
+
   @include vp-1023 {
     display: block;
   }

@@ -26,20 +26,17 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-right: 63px;
+  padding-right: 59px;
 
   @include vp-1023 {
-    padding-right: 17px;
+    padding-right: 0;
     align-items: center;
+    flex-wrap: nowrap;
   }
 
   @include vp-767 {
     padding-right: 0;
   }
-}
-
-.main-header__logo {
-  margin-right: 25px;
 }
 
 .main-header__button {

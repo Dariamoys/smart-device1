@@ -53,6 +53,10 @@
   padding-left: 161px;
   padding-bottom: 276px;
 
+  @include vp-1279 {
+    padding-left: 120px;
+  }
+
   @include vp-1023 {
     padding-top: 78px;
     padding-left: 50px;
