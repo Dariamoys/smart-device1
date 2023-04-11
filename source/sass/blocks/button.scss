@@ -12,6 +12,7 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1023 {
     padding: 16px 20px;
